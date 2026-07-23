@@ -1,0 +1,62 @@
+[
+  {
+    "id": "seiko-5-sports",
+    "name": "Seiko 5 Sports",
+    "category": "Relojes",
+    "tagline": "Automático, hecho en Japón desde 1963",
+    "image": "/images/product-seiko.jpg",
+    "description": "El Seiko 5 Sports es un ícono silencioso: un reloj automático que no necesita pilas, construido bajo los cinco principios que le dan su nombre (resistencia al agua, movimiento automático, corona protegida, caja y correa duraderas, diseño funcional). Es la puerta de entrada al mundo de la relojería japonesa seria.",
+    "specs": [
+      "Movimiento automático japonés (caliber 4R36)",
+      "Resistencia al agua 100m",
+      "Cristal Hardlex resistente a rayones",
+      "Reserva de marcha ~41 horas"
+    ],
+    "blogSlug": "relojes-seiko-historia"
+  },
+  {
+    "id": "camara-yashica",
+    "name": "Cámara Yashica Electro 35",
+    "category": "Cámaras",
+    "tagline": "Fotografía analógica de los 70s",
+    "image": "/images/product-camera.jpg",
+    "description": "Las cámaras rangefinder japonesas de los 70 y 80 siguen siendo buscadas por fotógrafos analógicos por su óptica precisa y construcción totalmente mecánica. Cada unidad que importamos es revisada para asegurar que el obturador y el fotómetro funcionen correctamente.",
+    "specs": [
+      "Lente fijo de alta apertura",
+      "Exposición automática con control manual",
+      "Cuerpo metálico, sin plástico",
+      "Funciona con película 35mm estándar"
+    ],
+    "blogSlug": null
+  },
+  {
+    "id": "cuchillo-gyuto",
+    "name": "Cuchillo Gyuto forjado a mano",
+    "category": "Cuchillería",
+    "tagline": "Acero de alto carbono, filo tradicional",
+    "image": "/images/product-knife.jpg",
+    "description": "El Gyuto es el equivalente japonés del cuchillo de chef occidental, pero forjado con técnicas heredadas de la espada samurái. El acero de alto carbono mantiene el filo por más tiempo, a cambio de requerir un poco más de cuidado que el acero inoxidable común.",
+    "specs": [
+      "Acero de alto carbono (forjado a mano)",
+      "Mango tradicional de madera (wa-handle)",
+      "Filo de un solo bisel",
+      "Requiere secado inmediato tras el uso"
+    ],
+    "blogSlug": "cuchillos-japoneses-forja"
+  },
+  {
+    "id": "porcelana-arita",
+    "name": "Set de porcelana estilo Arita",
+    "category": "Porcelana",
+    "tagline": "Cerámica tradicional de Kyushu",
+    "image": "/images/product-porcelain.jpg",
+    "description": "La porcelana Arita es una de las tradiciones cerámicas más antiguas de Japón, con más de 400 años de historia. Cada pieza combina la blancura característica de la porcelana con esmaltes que resisten el uso diario sin perder su brillo.",
+    "specs": [
+      "Porcelana de alta cocción",
+      "Apta para microondas y lavavajillas",
+      "Diseño inspirado en motivos tradicionales",
+      "Piezas individuales o en set"
+    ],
+    "blogSlug": null
+  }
+]
