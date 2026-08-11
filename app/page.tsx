@@ -31,7 +31,7 @@ export default function Home() {
             Curado, no masivo
           </span>
           <h1 className="mx-auto mt-6 max-w-3xl font-display text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
-            <span className="gradient-text">Tecnología con IA</span>
+            <span className="gradient-text">Tecnología accesible</span>
             <br />
             para el día a día
           </h1>
@@ -112,25 +112,6 @@ export default function Home() {
           </div>
         </section>
       )}
-
-      {/* CTA final */}
-      <section className="mx-auto max-w-6xl px-6 py-24 text-center">
-        <h2 className="font-display text-3xl font-semibold text-foreground">
-          ¿Buscas un gadget en particular?
-        </h2>
-        <p className="mx-auto mt-3 max-w-lg text-muted">
-          Contáctanos y te contamos si vale la pena, con la misma honestidad
-          con la que elegimos lo que ya vendemos.
-        </p>
-        <a
-          href={WHATSAPP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-8 inline-block rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 py-3.5 text-sm font-semibold text-background transition-opacity hover:opacity-90"
-        >
-          Escribir por WhatsApp
-        </a>
-      </section>
     </div>
   );
 }

@@ -1,6 +1,6 @@
 export const SITE = {
   name: "Sora",
-  tagline: "Tecnología con IA para el día a día",
+  tagline: "Tecnología accesible para el día a día",
 };
 
 export const CONTACT = {

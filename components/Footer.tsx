@@ -25,8 +25,13 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/blog" className="text-foreground/80 hover:text-accent-2">
-                Historias
+              <Link href="/nosotros" className="text-foreground/80 hover:text-accent-2">
+                Nosotros
+              </Link>
+            </li>
+            <li>
+              <Link href="/faq" className="text-foreground/80 hover:text-accent-2">
+                FAQ
               </Link>
             </li>
             <li>

@@ -4,7 +4,8 @@ import { SITE } from "@/lib/constants";
 
 const NAV_LINKS = [
   { href: "/products", label: "Catálogo" },
-  { href: "/blog", label: "Historias" },
+  { href: "/nosotros", label: "Nosotros" },
+  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contacto" },
 ];
 
