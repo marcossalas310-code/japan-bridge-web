@@ -20,7 +20,7 @@ const syne = Syne({
 export const metadata: Metadata = {
   title: `${SITE.name} — ${SITE.tagline}`,
   description:
-    "Gadgets con inteligencia artificial real, curados y accesibles para todos los días — gafas con traducción en vivo, y más en camino.",
+    "Tecnología útil para el día a día, seleccionada con cuidado y probada antes de recomendarla. Envíos a todo Chile.",
 };
 
 export default function RootLayout({

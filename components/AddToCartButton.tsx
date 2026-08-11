@@ -19,7 +19,7 @@ export default function AddToCartButton({ product }: { product: Product }) {
           Agotado por ahora
         </button>
         <p className="mt-2 text-sm text-muted">
-          Escribinos y te avisamos apenas vuelva a haber stock.
+          Escríbenos y te avisamos apenas vuelva a haber stock.
         </p>
       </div>
     );

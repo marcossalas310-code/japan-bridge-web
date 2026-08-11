@@ -26,7 +26,7 @@ export default function CartPage() {
           Tu carrito está vacío
         </h1>
         <p className="mt-3 text-muted">
-          Todavía no agregaste nada — mirá el catálogo y volvé cuando algo te
+          Todavía no agregaste nada — mira el catálogo y vuelve cuando algo te
           interese.
         </p>
         <Link

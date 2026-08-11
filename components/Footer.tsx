@@ -10,8 +10,8 @@ export default function Footer() {
             {SITE.name}
           </span>
           <p className="mt-3 text-sm leading-relaxed text-muted">
-            Gadgets con inteligencia artificial real, elegidos uno por uno —
-            sin promesas exageradas, con lo que de verdad funciona.
+            Tecnología útil para el día a día, seleccionada con cuidado — sin
+            promesas exageradas, con lo que de verdad funciona.
           </p>
         </div>
         <div>
@@ -61,7 +61,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-border px-6 py-4 text-center text-xs text-muted">
-        © {new Date().getFullYear()} {SITE.name}. Tecnología con IA, a tu puerta en Chile.
+        © {new Date().getFullYear()} {SITE.name}. Envíos a todo Chile.
       </div>
     </footer>
   );

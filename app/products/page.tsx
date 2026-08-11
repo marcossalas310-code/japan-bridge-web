@@ -6,7 +6,7 @@ import { SITE } from "@/lib/constants";
 export const metadata: Metadata = {
   title: `Catálogo — ${SITE.name}`,
   description:
-    "Gadgets con inteligencia artificial real, probados antes de recomendarlos.",
+    "Tecnología útil para el día a día, probada antes de recomendarla. Envíos a todo Chile.",
 };
 
 export default function ProductsPage() {
@@ -18,7 +18,7 @@ export default function ProductsPage() {
         Catálogo
       </span>
       <h1 className="mt-2 font-display text-4xl font-semibold text-foreground">
-        Gadgets con IA, probados antes de recomendarlos
+        Cada producto, probado antes de recomendarlo
       </h1>
       <p className="mt-4 max-w-2xl text-muted">
         Precios finales con envío a todo Chile. Coordinamos el pago por

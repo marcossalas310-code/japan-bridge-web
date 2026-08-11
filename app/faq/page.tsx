@@ -4,10 +4,14 @@ import { formatCLP } from "@/lib/format";
 
 export const metadata: Metadata = {
   title: `Preguntas frecuentes — ${SITE.name}`,
-  description: "Envíos, pagos y cómo comprar en " + SITE.name + ".",
+  description: `Envíos, pagos, garantía y cómo comprar en ${SITE.name}.`,
 };
 
 const FAQS = [
+  {
+    q: "¿Cómo eligen los productos?",
+    a: "Cada producto tiene que resolver algo concreto, ser fácil de usar desde el primer día y valer lo que cuesta. Lo probamos antes de sumarlo al catálogo — por eso crece despacio.",
+  },
   {
     q: "¿Cómo pago?",
     a: "Al finalizar tu pedido en el sitio, coordinamos el pago directamente por WhatsApp. No pedimos datos de tarjeta en la página.",

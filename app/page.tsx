@@ -3,7 +3,8 @@ import ProductCard from "@/components/ProductCard";
 import BlogPostCard from "@/components/BlogPostCard";
 import { getProducts } from "@/lib/products";
 import { getAllPostsMeta } from "@/lib/blog";
-import { WHATSAPP_URL } from "@/lib/constants";
+import { WHATSAPP_URL, SHIPPING } from "@/lib/constants";
+import { formatCLP } from "@/lib/format";
 
 export default function Home() {
   const products = getProducts().slice(0, 4);
@@ -28,7 +29,7 @@ export default function Home() {
 
         <div className="relative mx-auto w-full max-w-6xl px-6 py-32 text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-xs font-medium uppercase tracking-[0.15em] text-accent-2">
-            Curado, no masivo
+            Seleccionados con cuidado
           </span>
           <h1 className="mx-auto mt-6 max-w-3xl font-display text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
             <span className="gradient-text">Tecnología accesible</span>
@@ -36,9 +37,9 @@ export default function Home() {
             para el día a día
           </h1>
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted">
-            Elegimos gadgets con inteligencia artificial real — no otro
-            &ldquo;bluetooth con luces&rdquo; — y te contamos exactamente qué
-            hacen bien y qué no, antes de que los compres.
+            Cada producto pasa por nuestras manos antes de llegar al catálogo:
+            tiene que resolver algo concreto, ser fácil de usar desde el primer
+            día y valer lo que cuesta.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <Link
@@ -67,7 +68,7 @@ export default function Home() {
               Catálogo
             </span>
             <h2 className="mt-2 font-display text-3xl font-semibold text-foreground">
-              Gadgets seleccionados
+              Productos seleccionados
             </h2>
           </div>
           <Link
@@ -112,6 +113,41 @@ export default function Home() {
           </div>
         </section>
       )}
+
+      {/* Por qué comprar acá */}
+      <section className="border-t border-border py-20">
+        <div className="mx-auto grid max-w-6xl gap-10 px-6 sm:grid-cols-3">
+          <div>
+            <h3 className="font-display text-lg font-semibold text-foreground">
+              Probado antes de venderlo
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              No sumamos nada al catálogo sin tenerlo en la mano primero. Si algo
+              no cumple lo que promete, no lo vendemos.
+            </p>
+          </div>
+          <div>
+            <h3 className="font-display text-lg font-semibold text-foreground">
+              Envío a todo Chile
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              {formatCLP(SHIPPING.flatRate)} a cualquier región.
+              {SHIPPING.freeOver !== null && (
+                <> Gratis en pedidos sobre {formatCLP(SHIPPING.freeOver)}.</>
+              )}
+            </p>
+          </div>
+          <div>
+            <h3 className="font-display text-lg font-semibold text-foreground">
+              Hablas con nosotros
+            </h3>
+            <p className="mt-2 text-sm leading-relaxed text-muted">
+              Sin call center ni respuestas automáticas. Escribes por WhatsApp y
+              te responde la misma persona que eligió el producto.
+            </p>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

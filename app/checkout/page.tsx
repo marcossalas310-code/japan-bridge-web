@@ -45,7 +45,7 @@ export default function CheckoutPage() {
         <h1 className="font-display text-3xl font-semibold text-foreground">
           No hay nada para comprar
         </h1>
-        <p className="mt-3 text-muted">Agregá algo al carrito primero.</p>
+        <p className="mt-3 text-muted">Agrega algo al carrito primero.</p>
         <Link
           href="/products"
           className="mt-8 inline-block rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-90"
@@ -64,7 +64,7 @@ export default function CheckoutPage() {
         </h1>
         <p className="mt-4 text-muted">
           Se abrió WhatsApp con el detalle de tu pedido. Si no se abrió,
-          escribinos directo a{" "}
+          escríbenos directo a{" "}
           <a
             href={`https://wa.me/${CONTACT.phone.replace(/[^\d]/g, "")}`}
             target="_blank"
@@ -138,7 +138,7 @@ export default function CheckoutPage() {
         Finalizar compra
       </h1>
       <p className="mt-3 max-w-xl text-muted">
-        Completá tus datos de envío. Al confirmar, se abre WhatsApp con el
+        Completa tus datos de envío. Al confirmar, se abre WhatsApp con el
         detalle del pedido para coordinar el pago y la entrega.
       </p>
 
@@ -223,7 +223,7 @@ export default function CheckoutPage() {
           </button>
           <p className="text-xs text-muted">
             No pedimos datos de tarjeta en el sitio. El pago se coordina
-            directamente con vos por WhatsApp.
+            directamente contigo por WhatsApp.
           </p>
         </form>
 
