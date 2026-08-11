@@ -4,7 +4,7 @@ export const SITE = {
 };
 
 export const CONTACT = {
-  email: "naxustechstore@gmail.com",
+  email: "contacto@sorastores.com",
   phone: "+56945585904",
   phoneDisplay: "+56 9 4558 5904",
   location: "Las Condes, Santiago de Chile",
