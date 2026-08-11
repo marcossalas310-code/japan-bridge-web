@@ -13,9 +13,7 @@ export const CONTACT = {
 const whatsappNumber = CONTACT.phone.replace(/[^\d]/g, "");
 export const WHATSAPP_URL = `https://wa.me/${whatsappNumber}`;
 
-// TODO: reemplazar por tu propio endpoint de Formspree (gratis en formspree.io)
-// creando un formulario ahí y pegando el ID que te dan, ej: "https://formspree.io/f/abcdwxyz"
-export const FORMSPREE_ENDPOINT = "https://formspree.io/f/REEMPLAZAR_ID";
+export const FORMSPREE_ENDPOINT = "https://formspree.io/f/mrpzqojw";
 
 /**
  * Configuración de envío. Ajustá estos valores cuando tengas tarifas reales
