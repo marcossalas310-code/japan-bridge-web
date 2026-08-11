@@ -18,6 +18,7 @@ export type BlogPost = BlogPostMeta & {
 };
 
 export function getAllPostsMeta(): BlogPostMeta[] {
+  if (!fs.existsSync(BLOG_DIR)) return [];
   const files = fs.readdirSync(BLOG_DIR).filter((f) => f.endsWith(".md"));
 
   const posts = files.map((filename) => {
