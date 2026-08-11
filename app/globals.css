@@ -2,28 +2,67 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  --background: #f5f1e8;
-  --foreground: #2c2c2c;
-  --color-ink: #2c2c2c;
-  --color-gold: #b8963f;
-  --color-washi: #f5f1e8;
-  --color-torii: #a3312b;
-  --color-washi-dark: #ece5d3;
+  --background: #08080d;
+  --foreground: #f4f4f7;
+  --color-surface: #131319;
+  --color-surface-2: #1c1c26;
+  --color-border: rgba(255, 255, 255, 0.09);
+  --color-accent: #7c5cfc;
+  --color-accent-2: #22d3ee;
+  --color-muted: #9a9aac;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-ink: var(--color-ink);
-  --color-gold: var(--color-gold);
-  --color-washi: var(--color-washi);
-  --color-torii: var(--color-torii);
-  --color-washi-dark: var(--color-washi-dark);
-  --font-serif: var(--font-shippori);
+  --color-surface: var(--color-surface);
+  --color-surface-2: var(--color-surface-2);
+  --color-border: var(--color-border);
+  --color-accent: var(--color-accent);
+  --color-accent-2: var(--color-accent-2);
+  --color-muted: var(--color-muted);
+  --font-display: var(--font-syne);
   --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+.gradient-text {
+  background: linear-gradient(
+    100deg,
+    #ffffff 0%,
+    var(--color-accent-2) 30%,
+    var(--color-accent) 55%,
+    var(--color-accent-2) 80%,
+    #ffffff 100%
+  );
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: -250% center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gradient-text {
+    animation: none;
+  }
+}
+
+.glass {
+  background: color-mix(in srgb, var(--color-surface) 80%, transparent);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(16px);
 }

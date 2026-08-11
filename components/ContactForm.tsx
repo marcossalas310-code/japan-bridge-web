@@ -33,68 +33,53 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-ink/10 bg-white p-8 text-center">
-        <p className="font-serif text-xl text-ink">¡Gracias por escribir!</p>
-        <p className="mt-2 text-ink/70">
+      <div className="rounded-2xl border border-border bg-surface p-8 text-center">
+        <p className="font-display text-xl font-semibold text-foreground">¡Gracias por escribir!</p>
+        <p className="mt-2 text-muted">
           Recibimos tu mensaje y te responderemos a la brevedad.
         </p>
       </div>
     );
   }
 
+  const inputClass =
+    "mt-1 w-full rounded-lg border border-border bg-surface px-4 py-2.5 text-foreground outline-none transition-colors focus:border-accent";
+
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-5">
       <div>
-        <label htmlFor="name" className="text-sm font-medium text-ink/80">
+        <label htmlFor="name" className="text-sm font-medium text-foreground/80">
           Nombre
         </label>
-        <input
-          id="name"
-          name="name"
-          type="text"
-          required
-          className="mt-1 w-full rounded-lg border border-ink/20 bg-white px-4 py-2.5 text-ink outline-none focus:border-torii"
-        />
+        <input id="name" name="name" type="text" required className={inputClass} />
       </div>
       <div>
-        <label htmlFor="email" className="text-sm font-medium text-ink/80">
+        <label htmlFor="email" className="text-sm font-medium text-foreground/80">
           Email
         </label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          required
-          className="mt-1 w-full rounded-lg border border-ink/20 bg-white px-4 py-2.5 text-ink outline-none focus:border-torii"
-        />
+        <input id="email" name="email" type="email" required className={inputClass} />
       </div>
       <div>
-        <label htmlFor="product" className="text-sm font-medium text-ink/80">
+        <label htmlFor="product" className="text-sm font-medium text-foreground/80">
           Producto de interés (opcional)
         </label>
         <input
           id="product"
           name="product"
           type="text"
-          placeholder="Ej: Seiko 5 Sports"
-          className="mt-1 w-full rounded-lg border border-ink/20 bg-white px-4 py-2.5 text-ink outline-none focus:border-torii"
+          placeholder="Ej: Gafas con IA"
+          className={inputClass}
         />
       </div>
       <div>
-        <label htmlFor="message" className="text-sm font-medium text-ink/80">
+        <label htmlFor="message" className="text-sm font-medium text-foreground/80">
           Mensaje
         </label>
-        <textarea
-          id="message"
-          name="message"
-          required
-          rows={5}
-          className="mt-1 w-full rounded-lg border border-ink/20 bg-white px-4 py-2.5 text-ink outline-none focus:border-torii"
-        />
+        <textarea id="message" name="message" required rows={5} className={inputClass} />
       </div>
 
       {status === "error" && (
-        <p className="text-sm text-torii">
+        <p className="text-sm text-accent-2">
           Algo salió mal enviando tu mensaje. Intenta de nuevo o escríbenos
           directo por WhatsApp.
         </p>
@@ -103,7 +88,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="rounded-full bg-torii px-8 py-3 text-sm font-semibold text-washi transition-colors hover:bg-torii/90 disabled:opacity-60"
+        className="rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-90 disabled:opacity-60"
       >
         {status === "sending" ? "Enviando…" : "Enviar mensaje"}
       </button>

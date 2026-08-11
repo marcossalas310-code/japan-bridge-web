@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
-import { CONTACT, WHATSAPP_URL } from "@/lib/constants";
+import { CONTACT, WHATSAPP_URL, SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Contacto — Japan Bridge",
+  title: `Contacto — ${SITE.name}`,
   description:
     "Escríbenos por WhatsApp, email o el formulario de contacto para consultar por disponibilidad de productos.",
 };
@@ -11,13 +11,15 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <div className="mx-auto max-w-5xl px-6 py-16">
-      <span className="text-xs font-semibold uppercase tracking-wide text-torii">
+      <span className="text-xs font-semibold uppercase tracking-wide text-accent-2">
         Contacto
       </span>
-      <h1 className="mt-2 font-serif text-4xl text-ink">Hablemos</h1>
-      <p className="mt-4 max-w-xl text-ink/70">
-        ¿Tienes dudas sobre un producto, tiempos de envío o quieres encargar
-        algo puntual? Escríbenos por el canal que prefieras.
+      <h1 className="mt-2 font-display text-4xl font-semibold text-foreground">
+        Hablemos
+      </h1>
+      <p className="mt-4 max-w-xl text-muted">
+        ¿Tienes dudas sobre un producto, tiempos de envío o quieres consultar
+        por algo puntual? Escríbenos por el canal que prefieras.
       </p>
 
       <div className="mt-12 grid grid-cols-1 gap-12 lg:grid-cols-2">
@@ -28,44 +30,42 @@ export default function ContactPage() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-between rounded-2xl border border-ink/10 bg-white p-6 transition-shadow hover:shadow-md"
+            className="flex items-center justify-between rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-accent/40"
           >
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-ink/50">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted">
                 WhatsApp
               </p>
-              <p className="mt-1 font-serif text-lg text-ink">
+              <p className="mt-1 font-display text-lg font-semibold text-foreground">
                 {CONTACT.phoneDisplay}
               </p>
             </div>
-            <span className="text-torii">→</span>
+            <span className="text-accent-2">→</span>
           </a>
 
           <a
             href={`mailto:${CONTACT.email}`}
-            className="flex items-center justify-between rounded-2xl border border-ink/10 bg-white p-6 transition-shadow hover:shadow-md"
+            className="flex items-center justify-between rounded-2xl border border-border bg-surface p-6 transition-colors hover:border-accent/40"
           >
             <div>
-              <p className="text-xs font-semibold uppercase tracking-wide text-ink/50">
+              <p className="text-xs font-semibold uppercase tracking-wide text-muted">
                 Email
               </p>
-              <p className="mt-1 font-serif text-lg text-ink">
+              <p className="mt-1 font-display text-lg font-semibold text-foreground">
                 {CONTACT.email}
               </p>
             </div>
-            <span className="text-torii">→</span>
+            <span className="text-accent-2">→</span>
           </a>
 
-          <div className="rounded-2xl border border-ink/10 bg-white p-6">
-            <p className="text-xs font-semibold uppercase tracking-wide text-ink/50">
+          <div className="rounded-2xl border border-border bg-surface p-6">
+            <p className="text-xs font-semibold uppercase tracking-wide text-muted">
               Ubicación
             </p>
-            <p className="mt-1 font-serif text-lg text-ink">
+            <p className="mt-1 font-display text-lg font-semibold text-foreground">
               {CONTACT.location}
             </p>
-            <p className="mt-2 text-sm text-ink/60">
-              Envíos a todo Chile.
-            </p>
+            <p className="mt-2 text-sm text-muted">Envíos a todo Chile.</p>
           </div>
         </div>
       </div>

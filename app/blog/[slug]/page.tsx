@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAllPostsMeta, getPostBySlug } from "@/lib/blog";
+import { SITE } from "@/lib/constants";
 
 export async function generateStaticParams() {
   return getAllPostsMeta().map((post) => ({ slug: post.slug }));
@@ -17,7 +18,7 @@ export async function generateMetadata({
   const post = getPostBySlug(slug);
   if (!post) return {};
   return {
-    title: `${post.title} — Japan Bridge`,
+    title: `${post.title} — ${SITE.name}`,
     description: post.excerpt,
   };
 }
@@ -41,30 +42,32 @@ export default async function BlogPostPage({
 
   return (
     <article className="mx-auto max-w-3xl px-6 py-16">
-      <Link href="/blog" className="text-sm text-ink/60 hover:text-torii">
+      <Link href="/blog" className="text-sm text-muted hover:text-accent-2">
         ← Volver a historias
       </Link>
 
-      <span className="mt-6 block text-xs font-medium uppercase tracking-wide text-ink/50">
+      <span className="mt-6 block text-xs font-medium uppercase tracking-wide text-muted">
         {formatDate(post.date)}
       </span>
-      <h1 className="mt-2 font-serif text-3xl text-ink sm:text-4xl">
+      <h1 className="mt-2 font-display text-3xl font-semibold text-foreground sm:text-4xl">
         {post.title}
       </h1>
 
-      <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-2xl bg-washi-dark">
-        <Image
-          src={post.image}
-          alt={post.title}
-          fill
-          sizes="(min-width: 768px) 768px, 100vw"
-          className="object-cover"
-          priority
-        />
-      </div>
+      {post.image && (
+        <div className="relative mt-8 aspect-[16/9] overflow-hidden rounded-2xl border border-border bg-surface">
+          <Image
+            src={post.image}
+            alt={post.title}
+            fill
+            sizes="(min-width: 768px) 768px, 100vw"
+            className="object-cover"
+            priority
+          />
+        </div>
+      )}
 
       <div
-        className="prose prose-neutral mt-10 max-w-none prose-headings:font-serif prose-a:text-torii"
+        className="prose prose-invert mt-10 max-w-none prose-headings:font-display prose-a:text-accent-2"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
     </article>

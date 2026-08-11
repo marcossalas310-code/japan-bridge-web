@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Inter, Shippori_Mincho } from "next/font/google";
+import { Inter, Syne } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { CartProvider } from "@/lib/cart";
 import { SITE } from "@/lib/constants";
 import "./globals.css";
 
@@ -10,16 +11,16 @@ const inter = Inter({
   subsets: ["latin"],
 });
 
-const shippori = Shippori_Mincho({
-  variable: "--font-shippori",
-  weight: ["400", "500", "600", "700"],
+const syne = Syne({
+  variable: "--font-syne",
+  weight: ["600", "700", "800"],
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
   title: `${SITE.name} — ${SITE.tagline}`,
   description:
-    "Importamos relojes, cámaras, cuchillos y porcelana japonesa directo desde Japón hacia Chile. Piezas con historia, hechas por artesanos.",
+    "Gadgets con inteligencia artificial real, curados y accesibles para todos los días — gafas con traducción en vivo, y más en camino.",
 };
 
 export default function RootLayout({
@@ -30,12 +31,14 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${inter.variable} ${shippori.variable} h-full antialiased`}
+      className={`${inter.variable} ${syne.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+      <body className="flex min-h-full flex-col bg-background font-sans text-foreground">
+        <CartProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
