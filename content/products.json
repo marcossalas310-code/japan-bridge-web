@@ -2,7 +2,7 @@
   {
     "id": "gafas-ia-traduccion",
     "name": "Gafas con IA — Cámara y Traducción",
-    "category": "Gafas inteligentes",
+    "category": "Viajes y comunicación",
     "tagline": "Traduce en el momento, sin sacar el celular",
     "price": 89990,
     "stock": 2,
@@ -14,6 +14,25 @@
       "Llamadas y música por Bluetooth",
       "3 lentes intercambiables con protección UV",
       "Batería recargable incluida"
+    ],
+    "blogSlug": null
+  },
+  {
+    "id": "cinturon-luz-roja",
+    "name": "Cinturón de Luz Roja — Recuperación Muscular",
+    "category": "Salud y recuperación",
+    "tagline": "Para la tensión de estar todo el día sentado",
+    "price": 44990,
+    "stock": 0,
+    "comingSoon": true,
+    "image": "",
+    "description": "Emite luz roja e infrarroja (660nm y 850nm) sobre la zona donde lo apoyes. Se usa para aliviar tensión muscular y acompañar la recuperación después de entrenar, o de un día largo frente al computador. Tiene tres programas de 15, 30 y 45 minutos, y entrega un calor perceptible pero suave.\n\nUna aclaración que nos parece importante: muchos vendedores presentan estos cinturones como aparatos para «quemar grasa» o adelgazar. No hay evidencia que respalde eso y no te lo vamos a vender así. Lo que sí reportan quienes ya lo usan es alivio de tensión y de dolor muscular — para eso lo trajimos.\n\nTodavía no lo tenemos en la mano: llega en unas semanas y lo probamos antes de ponerlo a la venta, como todo lo que vendemos.",
+    "specs": [
+      "60 LEDs: luz roja 660nm e infrarroja 850nm",
+      "3 programas de 15, 30 y 45 minutos",
+      "Cinturón ajustable — espalda, cintura o piernas",
+      "Calor suave y constante durante la sesión",
+      "Se conecta a la corriente (100-240V)"
     ],
     "blogSlug": null
   }

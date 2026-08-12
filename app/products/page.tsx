@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import ProductCard from "@/components/ProductCard";
-import { getProducts } from "@/lib/products";
+import { getProductsByCategory } from "@/lib/products";
 import { SITE } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default function ProductsPage() {
-  const products = getProducts();
+  const groups = getProductsByCategory();
 
   return (
     <div className="mx-auto max-w-6xl px-6 py-16">
@@ -24,9 +24,18 @@ export default function ProductsPage() {
         Precios finales con envío a todo Chile. Coordinamos el pago por
         WhatsApp al confirmar tu pedido.
       </p>
-      <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
+      <div className="mt-12 flex flex-col gap-16">
+        {groups.map((group) => (
+          <section key={group.category}>
+            <h2 className="font-display text-2xl font-semibold text-foreground">
+              {group.category}
+            </h2>
+            <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {group.products.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+          </section>
         ))}
       </div>
     </div>

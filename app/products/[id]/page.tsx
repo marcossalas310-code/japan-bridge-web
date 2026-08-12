@@ -71,9 +71,13 @@ export default async function ProductDetailPage({
             {formatCLP(product.price)}
           </p>
 
-          <p className="mt-6 leading-relaxed text-foreground/80">
-            {product.description}
-          </p>
+          <div className="mt-6 flex flex-col gap-4">
+            {product.description.split("\n\n").map((parrafo) => (
+              <p key={parrafo} className="leading-relaxed text-foreground/80">
+                {parrafo}
+              </p>
+            ))}
+          </div>
 
           <ul className="mt-6 space-y-2">
             {product.specs.map((spec) => (

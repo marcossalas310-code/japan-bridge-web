@@ -40,10 +40,16 @@ export default function ProductCard({ product }: { product: Product }) {
             Ver detalle →
           </span>
         </div>
-        {product.stock <= 0 && (
-          <span className="text-xs font-medium uppercase tracking-wide text-muted">
-            Agotado
+        {product.comingSoon ? (
+          <span className="text-xs font-medium uppercase tracking-wide text-accent-2">
+            Próximamente
           </span>
+        ) : (
+          product.stock <= 0 && (
+            <span className="text-xs font-medium uppercase tracking-wide text-muted">
+              Agotado
+            </span>
+          )
         )}
       </div>
     </Link>

@@ -4,10 +4,32 @@ import { useState } from "react";
 import Link from "next/link";
 import { useCart } from "@/lib/cart";
 import type { Product } from "@/lib/products";
+import { WHATSAPP_URL } from "@/lib/constants";
 
 export default function AddToCartButton({ product }: { product: Product }) {
   const { addItem } = useCart();
   const [added, setAdded] = useState(false);
+
+  if (product.comingSoon) {
+    return (
+      <div className="mt-8">
+        <a
+          href={`${WHATSAPP_URL}?text=${encodeURIComponent(
+            `Hola! Quiero que me avisen cuando llegue: ${product.name}`,
+          )}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-90"
+        >
+          Avísame cuando llegue
+        </a>
+        <p className="mt-3 text-sm text-muted">
+          Todavía no lo tenemos en stock. Te escribimos apenas llegue, sin
+          compromiso.
+        </p>
+      </div>
+    );
+  }
 
   if (product.stock <= 0) {
     return (
