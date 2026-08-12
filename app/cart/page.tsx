@@ -152,7 +152,7 @@ export default function CartPage() {
 
           <Link
             href="/checkout"
-            className="mt-6 block rounded-full bg-gradient-to-r from-accent to-accent-2 px-6 py-3 text-center text-sm font-semibold text-background transition-opacity hover:opacity-90"
+            className="mt-6 block rounded-full btn-glow bg-gradient-to-r from-accent to-accent-2 px-6 py-3 text-center text-sm font-semibold text-background"
           >
             Continuar con la compra
           </Link>

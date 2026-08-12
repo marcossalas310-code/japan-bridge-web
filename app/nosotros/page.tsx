@@ -73,7 +73,7 @@ export default function NosotrosPage() {
         </p>
         <Link
           href="/products"
-          className="mt-6 inline-block rounded-full bg-gradient-to-r from-accent to-accent-2 px-7 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-90"
+          className="btn-glow mt-6 inline-block rounded-full bg-gradient-to-r from-accent to-accent-2 px-7 py-3 text-sm font-semibold text-background"
         >
           Ver el catálogo
         </Link>

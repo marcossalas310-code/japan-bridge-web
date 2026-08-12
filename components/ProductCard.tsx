@@ -44,10 +44,14 @@ export default function ProductCard({ product }: { product: Product }) {
           <span className="text-xs font-medium uppercase tracking-wide text-accent-2">
             Próximamente
           </span>
+        ) : product.stock <= 0 ? (
+          <span className="text-xs font-medium uppercase tracking-wide text-muted">
+            Agotado
+          </span>
         ) : (
-          product.stock <= 0 && (
-            <span className="text-xs font-medium uppercase tracking-wide text-muted">
-              Agotado
+          product.stock <= 3 && (
+            <span className="text-xs font-medium uppercase tracking-wide text-accent">
+              Últimas unidades
             </span>
           )
         )}

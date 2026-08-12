@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import ProductCard from "@/components/ProductCard";
 import BlogPostCard from "@/components/BlogPostCard";
 import { getProducts } from "@/lib/products";
@@ -9,6 +10,8 @@ import { formatCLP } from "@/lib/format";
 export default function Home() {
   const products = getProducts().slice(0, 4);
   const posts = getAllPostsMeta().slice(0, 3);
+  // El primero del catálogo hace de destacado en el hero.
+  const destacado = products[0];
 
   return (
     <div>
@@ -27,36 +30,98 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative mx-auto w-full max-w-6xl px-6 py-32 text-center">
-          <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-xs font-medium uppercase tracking-[0.15em] text-accent-2">
-            Seleccionados con cuidado
-          </span>
-          <h1 className="mx-auto mt-6 max-w-3xl font-display text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
-            <span className="gradient-text">Tecnología accesible</span>
-            <br />
-            para el día a día
-          </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg text-muted">
-            Cada producto pasa por nuestras manos antes de llegar al catálogo:
-            tiene que resolver algo concreto, ser fácil de usar desde el primer
-            día y valer lo que cuesta.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <Link
-              href="/products"
-              className="rounded-full bg-gradient-to-r from-accent to-accent-2 px-7 py-3.5 text-sm font-semibold text-background transition-opacity hover:opacity-90"
-            >
-              Ver catálogo
-            </Link>
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-full border border-border px-7 py-3.5 text-sm font-semibold text-foreground transition-colors hover:border-accent/50 hover:bg-surface"
-            >
-              Consultar por WhatsApp
-            </a>
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-14 px-6 py-28 lg:grid-cols-[1.1fr_1fr]">
+          <div className="text-center lg:text-left">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-surface px-4 py-1.5 text-xs font-medium uppercase tracking-[0.15em] text-accent-2">
+              Seleccionados con cuidado
+            </span>
+            <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl">
+              <span className="gradient-text">Tecnología accesible</span>
+              <br />
+              para el día a día
+            </h1>
+            <p className="mx-auto mt-6 max-w-xl text-lg text-muted lg:mx-0">
+              Cada producto pasa por nuestras manos antes de llegar al catálogo:
+              tiene que resolver algo concreto, ser fácil de usar desde el
+              primer día y valer lo que cuesta.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center justify-center gap-4 lg:justify-start">
+              <Link
+                href="/products"
+                className="btn-glow rounded-full bg-gradient-to-r from-accent to-accent-2 px-7 py-3.5 text-sm font-semibold text-background"
+              >
+                Ver catálogo
+              </Link>
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-glow-subtle rounded-full border border-border bg-surface px-7 py-3.5 text-sm font-semibold text-foreground hover:border-accent/50"
+              >
+                Consultar por WhatsApp
+              </a>
+            </div>
+
+            {/* Señales de confianza: arriba del scroll, no enterradas al final */}
+            <dl className="mt-12 flex flex-wrap justify-center gap-x-10 gap-y-6 border-t border-border pt-8 lg:justify-start">
+              <div>
+                <dt className="font-display text-xl font-semibold text-foreground">
+                  {formatCLP(SHIPPING.flatRate)}
+                </dt>
+                <dd className="mt-0.5 text-sm text-muted">Envío a todo Chile</dd>
+              </div>
+              {SHIPPING.freeOver !== null && (
+                <div>
+                  <dt className="font-display text-xl font-semibold text-foreground">
+                    Sobre {formatCLP(SHIPPING.freeOver)}
+                  </dt>
+                  <dd className="mt-0.5 text-sm text-muted">Envío gratis</dd>
+                </div>
+              )}
+              <div>
+                <dt className="font-display text-xl font-semibold text-foreground">
+                  Respuesta directa
+                </dt>
+                <dd className="mt-0.5 text-sm text-muted">Sin call center</dd>
+              </div>
+            </dl>
           </div>
+
+          {/* Producto destacado: le da algo que mirar al hero, no solo texto */}
+          {destacado && (
+            <Link
+              href={`/products/${destacado.id}`}
+              className="group glass mx-auto w-full max-w-sm rounded-3xl p-5 transition-colors hover:border-accent/40 lg:mx-0"
+            >
+              <div className="relative aspect-square overflow-hidden rounded-2xl bg-surface-2">
+                {destacado.image ? (
+                  <Image
+                    src={destacado.image}
+                    alt={destacado.name}
+                    fill
+                    sizes="(min-width: 1024px) 24rem, 100vw"
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                    priority
+                  />
+                ) : (
+                  <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent/25 to-accent-2/10">
+                    <span className="h-20 w-20 rounded-3xl bg-gradient-to-br from-accent to-accent-2 opacity-80" />
+                  </div>
+                )}
+                <span className="absolute left-3 top-3 rounded-full bg-background/80 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.15em] text-accent-2 backdrop-blur">
+                  Destacado
+                </span>
+              </div>
+              <div className="mt-4 flex items-end justify-between gap-4">
+                <h2 className="font-display text-base font-semibold leading-snug text-foreground">
+                  {destacado.name}
+                </h2>
+                <span className="shrink-0 font-display text-lg font-semibold text-foreground">
+                  {formatCLP(destacado.price)}
+                </span>
+              </div>
+            </Link>
+          )}
         </div>
       </section>
 

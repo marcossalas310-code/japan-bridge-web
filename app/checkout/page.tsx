@@ -217,7 +217,7 @@ export default function CheckoutPage() {
 
           <button
             type="submit"
-            className="mt-2 rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 py-3.5 text-sm font-semibold text-background transition-opacity hover:opacity-90"
+            className="btn-glow mt-2 rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 py-3.5 text-sm font-semibold text-background"
           >
             Confirmar pedido por WhatsApp
           </button>

@@ -19,7 +19,7 @@ export default function AddToCartButton({ product }: { product: Product }) {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-90"
+          className="inline-block btn-glow rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 py-3 text-sm font-semibold text-background"
         >
           Avísame cuando llegue
         </a>
@@ -62,7 +62,7 @@ export default function AddToCartButton({ product }: { product: Product }) {
       <div className="flex flex-wrap items-center gap-3">
         <button
           onClick={handleAdd}
-          className="rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 py-3 text-sm font-semibold text-background transition-opacity hover:opacity-90"
+          className="btn-glow rounded-full bg-gradient-to-r from-accent to-accent-2 px-8 py-3 text-sm font-semibold text-background"
         >
           Agregar al carrito
         </button>
