@@ -3,17 +3,18 @@
     "id": "gafas-ia-traduccion",
     "name": "Gafas con IA — Cámara y Traducción",
     "category": "Viajes y comunicación",
-    "tagline": "Traduce en el momento, sin sacar el celular",
+    "tagline": "Cámara, traducción y música sin sacar el celular",
     "price": 89990,
     "stock": 1,
     "image": "",
-    "description": "Se conectan por Bluetooth a una app y traducen conversaciones en tiempo real — perfectas para viajar o hablar con alguien que no comparte tu idioma. También sacan fotos y graban video con la cámara integrada, reproducen música y permiten contestar llamadas sin sacar el celular del bolsillo. Las probamos antes de sumarlas al catálogo: la cámara cumple bien sin pretender ser de nivel profesional, y la traducción funciona a través de la app conectada — no es una función aislada del lente, así que necesitas el celular cerca.",
+    "description": "Unas gafas de sol con cámara integrada que se conectan por Bluetooth y WiFi a una app (Hey Cyan), desde donde funcionan la traducción y el asistente de IA. Un toque saca una foto, dos toques graban video, y el panel táctil lateral controla volumen y música. Vienen con cable de carga, paño y gomas antideslizantes para las patillas.\n\nLas usamos veinte minutos seguidos antes de publicarlas. Esto es lo que encontramos, incluido lo que no nos gustó:\n\nLa batería dura poco. Bajó de 76% a 61% en veinte minutos de uso continuo, así que calcula unas dos horas si las usas sin parar. Para salidas cortas cumple; para todo un día, no.\n\nNo graban en 4K, aunque el fabricante lo declare. La calidad de foto y video es aceptable para lo que cuestan — un 6 o 7 de 10 — y no más que eso. El audio está en el mismo nivel.\n\nEl asistente y la traducción funcionan, pero con demoras irregulares: a veces responde al instante y a veces tarda entre treinta segundos y un minuto. Es la parte más floja del producto y la que más nos costó calificar.\n\nPasar las fotos al celular tiene pasos. Primero se importan del lente a la app, y desde ahí las guardas en el teléfono. Cada importación necesita conexión WiFi.\n\nSe enciende una luz al fotografiar y al grabar, así que no son discretas.\n\nEl armado es de plástico correcto sin ser premium, con forma de lentes de sol cuadrados normales. Si buscas algo del nivel de unos Ray-Ban Meta, estas no lo son. Si quieres probar la experiencia de tener cámara y traducción en unos lentes sin gastar diez veces más, cumplen.",
     "specs": [
-      "Cámara HD de 8MP, grabación de video en 4K",
-      "Traducción en tiempo real vía app (decenas de idiomas)",
-      "Llamadas y música por Bluetooth",
-      "3 lentes intercambiables con protección UV",
-      "Batería recargable incluida"
+      "Cámara para foto y video (el 4K que declara el fabricante no es real)",
+      "Traducción y asistente de IA a través de la app Hey Cyan",
+      "Batería de unas 2 horas de uso continuo",
+      "Bluetooth y WiFi — llamadas y música",
+      "Panel táctil lateral para volumen y canciones",
+      "Incluye cable de carga, paño y gomas antideslizantes"
     ],
     "blogSlug": null
   },
