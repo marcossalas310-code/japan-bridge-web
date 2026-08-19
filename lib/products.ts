@@ -16,6 +16,8 @@ export type Product = {
    */
   comingSoon?: boolean;
   image: string;
+  /** Fotos adicionales para la galería de la ficha de producto */
+  gallery?: string[];
   description: string;
   specs: string[];
   blogSlug: string | null;

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import AddToCartButton from "@/components/AddToCartButton";
+import ProductGallery from "@/components/ProductGallery";
 import { getProductById, getProducts } from "@/lib/products";
 import { formatCLP } from "@/lib/format";
 import { SITE } from "@/lib/constants";
@@ -41,22 +42,18 @@ export default async function ProductDetailPage({
       </Link>
 
       <div className="mt-6 grid grid-cols-1 gap-10 lg:grid-cols-2">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-surface">
-          {product.image ? (
-            <Image
-              src={product.image}
-              alt={product.name}
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-              priority
-            />
-          ) : (
+        {product.image ? (
+          <ProductGallery
+            images={[product.image, ...(product.gallery ?? [])]}
+            alt={product.name}
+          />
+        ) : (
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-surface">
             <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent/20 to-accent-2/10">
               <span className="h-24 w-24 rounded-3xl bg-gradient-to-br from-accent to-accent-2 opacity-80" />
             </div>
-          )}
-        </div>
+          </div>
+        )}
 
         <div>
           <span className="text-xs font-semibold uppercase tracking-wide text-accent-2">
