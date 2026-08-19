@@ -20,7 +20,7 @@ export default function ProductGallery({
           alt={alt}
           fill
           sizes="(min-width: 1024px) 50vw, 100vw"
-          className="object-cover"
+          className="object-contain"
           priority
         />
       </div>
@@ -39,7 +39,7 @@ export default function ProductGallery({
                   : "border-border opacity-70 hover:opacity-100"
               }`}
             >
-              <Image src={src} alt="" fill sizes="64px" className="object-cover" />
+              <Image src={src} alt="" fill sizes="64px" className="object-contain" />
             </button>
           ))}
         </div>
